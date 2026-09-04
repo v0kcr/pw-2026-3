@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Mi Ulima</title>
+    <link rel="stylesheet" href="../public/dist/css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <!-- Barra Lateral (Sidebar) -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">Ulima</div>
+            <nav class="sidebar-menu">
+                <a href="#" class="menu-item active">Inicio</a>
+                <a href="#" class="menu-item">Mis Cursos</a>
+                <a href="#" class="menu-item">Horario</a>
+                <a href="#" class="menu-item">Trámites</a>
+                <a href="#" class="menu-item">Configuración</a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout-btn">Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="main-content">
+            <!-- Barra Superior (Topbar) -->
+            <header class="topbar">
+                <div class="page-title">Panel de Control</div>
+                <div class="user-profile">
+                    <span class="user-name">Juan Pérez (20261234)</span>
+                    <div class="user-avatar">JP</div>
+                </div>
+            </header>
+
+            <!-- Contenedor de Tarjetas Informativas -->
+            <section class="dashboard-grid">
+                <!-- Tarjeta: Resumen -->
+                <div class="card card-welcome">
+                    <h3>¡Hola de nuevo, Juan!</h3>
+                    <p>Bienvenido al ciclo académico actual. Revisa tus pendientes de la semana.</p>
+                </div>
+
+                <!-- Tarjeta: Promedio Actual -->
+                <div class="card card-stat">
+                    <h4>Promedio Ponderado</h4>
+                    <p class="stat-number">16.5</p>
+                    <span class="stat-label">Rendimiento Alto</span>
+                </div>
+
+                <!-- Tarjeta: Cursos Matriculados -->
+                <div class="card card-stat">
+                    <h4>Cursos Matriculados</h4>
+                    <p class="stat-number">5</p>
+                    <span class="stat-label">22 Créditos Totales</span>
+                </div>
+            </section>
+
+            <!-- Sección Inferior: Lista de Cursos -->
+            <section class="courses-section">
+                <h3>Mis Asignaturas</h3>
+                <div class="courses-list">
+                    <div class="course-row">
+                        <div class="course-info">
+                            <span class="course-code">80124</span>
+                            <span class="course-name">Desarrollo Web Front-End</span>
+                        </div>
+                        <span class="course-status badge-active">En curso</span>
+                    </div>
+                    <div class="course-row">
+                        <div class="course-info">
+                            <span class="course-code">80125</span>
+                            <span class="course-name">Base de Datos I</span>
+                        </div>
+                        <span class="course-status badge-active">En curso</span>
+                    </div>
+                    <div class="course-row">
+                        <div class="course-info">
+                            <span class="course-code">80126</span>
+                            <span class="course-name">Estructuras de Datos</span>
+                        </div>
+                        <span class="course-status badge-active">En curso</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
