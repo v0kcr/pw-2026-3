@@ -42,7 +42,25 @@ export function signIn(req, res) {
   });
 }
 
-export async function login(req, res) {
+export function login(req, res) {
+  let fondos = [
+    "/assets/img/SIME.png",
+    "/assets/img/images.jpg",
+    "/assets/img/images2.jpg"
+  ]
+  return res.render('website/login', {
+    title: 'Bienvenido',
+    background: fondos[Math.floor(Math.random()*3)]
+  });
+}
+
+export function resetPassword(req, res) {
+  return res.render('website/reset-password', {
+    title: 'Recuperar Contraseña',
+  });
+}
+
+export async function login2(req, res) {
   const { user, password } = req.body;
   const validUser = process.env.DEFAULT_USER || 'admin';
   const validPassword = process.env.DEFAULT_PASSWORD || '123';
