@@ -7,6 +7,14 @@ export function home(req, res) {
       'Esta es una aplicación de ejemplo creada con Node.js, Express y EJS.'
   });
 }
+export function register(req, res) {
+  return res.render('website/register', {
+    title: 'Crear cuenta :)',
+    currentPage: 'register',
+    description:
+      'Esta es una aplicación de ejemplo creada con Node.js, Express y EJS.'
+  });
+}
 
 export function about(req, res) {
   return res.render('website/about', {
