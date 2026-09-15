@@ -8,6 +8,28 @@ export function home(req, res) {
   });
 }
 
+export function register(req, res) {
+  return res.render('website/register', {
+    title: 'Crear cuenta',
+  });
+}
+
+export function convocatoria(req, res) {
+  return res.render('website/convocatoria', {
+    title: 'Convocatorias',
+  });
+}
+export function empresa(req, res) {
+  return res.render('website/empresa', {
+    title: 'empresa',
+  });
+}
+export function comoFunciona(req, res) {
+  return res.render('website/comoFunciona', {
+    title: 'comoFunciona',
+  });
+}
+
 export function about(req, res) {
   return res.render('website/about', {
     title: 'Acerca de',
@@ -42,7 +64,25 @@ export function signIn(req, res) {
   });
 }
 
-export async function login(req, res) {
+export function login(req, res) {
+  let fondos = [
+    "/assets/img/login-bg.png",
+    "/assets/img/login-bg2.png",
+    "/assets/img/login-bg3.jpg"
+  ];
+  return res.render('website/login', {
+    title: 'Bienvenido',
+    background: fondos[Math.floor(Math.random() * 3)]
+  });
+}
+
+export function resetPassword(req, res) {
+  return res.render('website/reset-password', {
+    title: 'Recuperar Contraseña',
+  });
+}
+
+export async function login2(req, res) {
   const { user, password } = req.body;
   const validUser = process.env.DEFAULT_USER || 'admin';
   const validPassword = process.env.DEFAULT_PASSWORD || '123';

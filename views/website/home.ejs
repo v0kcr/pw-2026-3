@@ -1,105 +1,259 @@
+
 <!-- views/website/home.ejs -->
+
 <% layout("layouts/website") %>
 
-<section class="bg-dark text-white">
 
-  <div id="heroCarousel"
-       class="carousel slide carousel-fade"
-       data-bs-ride="carousel">
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-    <!-- Indicadores -->
-    <div class="carousel-indicators">
+<section class="hero-home bg-dark text-white position-relative overflow-hidden">
 
-      <button
-        type="button"
-        data-bs-target="#heroCarousel"
-        data-bs-slide-to="0"
-        class="active"
-        aria-current="true"
-        aria-label="Slide 1">
-      </button>
+  <div class="container py-5">
 
-      <button
-        type="button"
-        data-bs-target="#heroCarousel"
-        data-bs-slide-to="1"
-        aria-label="Slide 2">
-      </button>
+    <div class="row align-items-center min-vh-75 py-5">
 
-      <button
-        type="button"
-        data-bs-target="#heroCarousel"
-        data-bs-slide-to="2"
-        aria-label="Slide 3">
-      </button>
+      <!-- Texto -->
+      <div class="col-lg-7 py-5">
 
-    </div>
+        <span class="badge rounded-pill bg-success bg-opacity-25
+                     text-success px-3 py-2 mb-4">
+
+          <i class="fa-solid fa-graduation-cap me-2"></i>
+          Oportunidades para estudiantes
+
+        </span>
 
 
-    <!-- Slides -->
-    <div class="carousel-inner">
+        <h1 class="display-2 fw-bold lh-1 mb-4">
+
+          Tu primera experiencia
+          <span class="text-success">
+            empieza aquí.
+          </span>
+
+        </h1>
 
 
-      <!-- SLIDE 1 -->
-      <div class="carousel-item active">
+        <p class="lead text-secondary mb-4 pe-lg-5">
 
-        <div
-          class="container-fluid"
-          style="
-            min-height: 600px;
-            background:
-              linear-gradient(
-                90deg,
-                rgba(0,0,0,.90),
-                rgba(0,0,0,.55),
-                rgba(0,0,0,.25)
-              ),
-              url('/assets/img/slider-1.jpg')
-              center/cover;
-          ">
+          Encuentra prácticas pre-profesionales,
+          descubre nuevas oportunidades y empieza a
+          construir tu futuro profesional.
 
+        </p>
+
+
+        <div class="d-flex flex-wrap gap-3">
+
+          <a
+            href="/convocatorias"
+            class="btn btn-success btn-lg px-4 rounded-3">
+
+            <i class="fa-solid fa-magnifying-glass me-2"></i>
+            Buscar prácticas
+
+          </a>
+
+
+          <a
+            href="/como-funciona"
+            class="btn btn-outline-light btn-lg px-4 rounded-3">
+
+            Cómo funciona
+            <i class="fa-solid fa-arrow-right ms-2"></i>
+
+          </a>
+
+        </div>
+
+
+        <!-- Mini estadísticas -->
+        <div class="d-flex flex-wrap gap-4 mt-5">
+
+          <div>
+            <h4 class="fw-bold mb-0">
+              500+
+            </h4>
+
+            <small class="text-secondary">
+              Oportunidades
+            </small>
+          </div>
+
+
+          <div>
+            <h4 class="fw-bold mb-0">
+              100+
+            </h4>
+
+            <small class="text-secondary">
+              Empresas
+            </small>
+          </div>
+
+
+          <div>
+            <h4 class="fw-bold mb-0">
+              24/7
+            </h4>
+
+            <small class="text-secondary">
+              Disponible
+            </small>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Tarjeta visual -->
+      <div class="col-lg-5 d-none d-lg-block">
+
+        <div class="position-relative">
+
+          <!-- Círculo decorativo -->
           <div
-            class="container d-flex align-items-center"
-            style="min-height: 600px;">
+            class="position-absolute top-50 start-50
+                   translate-middle bg-success rounded-circle opacity-25"
+            style="width:380px;height:380px;">
 
-            <div class="row">
+          </div>
 
-              <div class="col-lg-7">
 
-                <span class="badge bg-success mb-3 px-3 py-2">
-                  FIFA / EA FC PLAYER DATABASE
+          <!-- Card -->
+          <div
+            class="card border-0 shadow-lg rounded-4
+                   position-relative">
+
+            <div class="card-body p-4">
+
+
+              <div class="d-flex justify-content-between
+                          align-items-center mb-4">
+
+                <div>
+
+                  <small class="text-muted">
+                    OPORTUNIDAD DESTACADA
+                  </small>
+
+                  <h5 class="fw-bold mb-0 mt-1">
+                    Practicante de Tecnología
+                  </h5>
+
+                </div>
+
+                <span
+                  class="bg-success bg-opacity-10
+                         text-success rounded-circle
+                         d-flex align-items-center
+                         justify-content-center"
+                  style="width:45px;height:45px;">
+
+                  <i class="fa-solid fa-code"></i>
+
                 </span>
 
-                <h1 class="display-3 fw-bold mb-4">
-                  Descubre el mundo de
-                  <span class="text-success">
-                    PlayerStats
-                  </span>
-                </h1>
+              </div>
 
-                <p class="lead text-light mb-4">
-                  Explora una completa base de datos de jugadores,
-                  equipos, ligas, posiciones y estadísticas.
-                </p>
 
-                <div class="d-flex flex-wrap gap-2">
+              <div class="d-flex align-items-center mb-3">
 
-                  <a
-                    href="/players"
-                    class="btn btn-success btn-lg px-4">
+                <div
+                  class="bg-light rounded-3
+                         d-flex align-items-center
+                         justify-content-center me-3"
+                  style="width:50px;height:50px;">
 
-                    <i class="bi bi-people me-2"></i>
-                    Explorar jugadores
+                  <i class="fa-solid fa-building text-success"></i>
 
-                  </a>
+                </div>
 
-                  <a
-                    href="#about"
-                    class="btn btn-outline-light btn-lg px-4">
+                <div>
 
-                    Conocer más
+                  <strong class="d-block">
+                    Empresa
+                  </strong>
 
-                  </a>
+                  <small class="text-muted">
+                    Lima, Perú
+                  </small>
+
+                </div>
+
+              </div>
+
+
+              <div class="d-flex flex-wrap gap-2 mb-4">
+
+                <span class="badge bg-light text-dark">
+                  Tecnología
+                </span>
+
+                <span class="badge bg-light text-dark">
+                  Híbrido
+                </span>
+
+                <span class="badge bg-light text-dark">
+                  Part-time
+                </span>
+
+              </div>
+
+
+              <div
+                class="d-flex justify-content-between
+                       align-items-center">
+
+                <small class="text-muted">
+                  Publicado recientemente
+                </small>
+
+                <span class="text-success fw-semibold">
+                  Ver convocatoria
+                  <i class="fa-solid fa-arrow-right ms-1"></i>
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Floating card -->
+          <div
+            class="card border-0 shadow position-absolute
+                   bottom-0 start-0 translate-middle-y
+                   rounded-3">
+
+            <div class="card-body py-3 px-4">
+
+              <div class="d-flex align-items-center">
+
+                <div
+                  class="bg-success bg-opacity-10
+                         text-success rounded-circle
+                         d-flex align-items-center
+                         justify-content-center me-2"
+                  style="width:38px;height:38px;">
+
+                  <i class="fa-solid fa-check"></i>
+
+                </div>
+
+                <div>
+
+                  <strong class="d-block text-dark">
+                    ¡Postulación enviada!
+                  </strong>
+
+                  <small class="text-muted">
+                    Tu perfil está avanzando
+                  </small>
 
                 </div>
 
@@ -113,363 +267,125 @@
 
       </div>
 
-
-      <!-- SLIDE 2 -->
-      <div class="carousel-item">
-
-        <div
-          class="container-fluid"
-          style="
-            min-height: 600px;
-            background:
-              linear-gradient(
-                90deg,
-                rgba(0,0,0,.90),
-                rgba(0,0,0,.55),
-                rgba(0,0,0,.25)
-              ),
-              url('/assets/img/slider-2.jpg')
-              center/cover;
-          ">
-
-          <div
-            class="container d-flex align-items-center"
-            style="min-height: 600px;">
-
-            <div class="row w-100">
-
-              <div class="col-lg-7">
-
-                <span class="badge bg-success mb-3 px-3 py-2">
-                  PLAYER STATISTICS
-                </span>
-
-                <h2 class="display-4 fw-bold mb-4">
-                  Analiza cada
-                  <span class="text-success">
-                    estadística
-                  </span>
-                </h2>
-
-                <p class="lead mb-4">
-                  Consulta velocidad, tiro, pase, regate,
-                  defensa, físico y valoración general.
-                </p>
-
-                <a
-                  href="/players"
-                  class="btn btn-success btn-lg px-4">
-
-                  Ver estadísticas
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- SLIDE 3 -->
-      <div class="carousel-item">
-
-        <div
-          class="container-fluid"
-          style="
-            min-height: 600px;
-            background:
-              linear-gradient(
-                90deg,
-                rgba(0,0,0,.90),
-                rgba(0,0,0,.55),
-                rgba(0,0,0,.25)
-              ),
-              url('/assets/img/slider-3.jpg')
-              center/cover;
-          ">
-
-          <div
-            class="container d-flex align-items-center"
-            style="min-height: 600px;">
-
-            <div class="row w-100">
-
-              <div class="col-lg-7">
-
-                <span class="badge bg-success mb-3 px-3 py-2">
-                  SMART FILTERS
-                </span>
-
-                <h2 class="display-4 fw-bold mb-4">
-                  Encuentra al jugador
-                  <span class="text-success">
-                    perfecto
-                  </span>
-                </h2>
-
-                <p class="lead mb-4">
-                  Filtra jugadores por posición, nación,
-                  liga, equipo, pie y estilo de juego.
-                </p>
-
-                <a
-                  href="/players"
-                  class="btn btn-success btn-lg px-4">
-
-                  <i class="bi bi-search me-2"></i>
-                  Buscar jugadores
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
     </div>
-
-
-    <!-- Controles -->
-    <button
-      class="carousel-control-prev"
-      type="button"
-      data-bs-target="#heroCarousel"
-      data-bs-slide="prev">
-
-      <span class="carousel-control-prev-icon"></span>
-
-      <span class="visually-hidden">
-        Anterior
-      </span>
-
-    </button>
-
-    <button
-      class="carousel-control-next"
-      type="button"
-      data-bs-target="#heroCarousel"
-      data-bs-slide="next">
-
-      <span class="carousel-control-next-icon"></span>
-
-      <span class="visually-hidden">
-        Siguiente
-      </span>
-
-    </button>
 
   </div>
 
 </section>
 
 
+
 <!-- =========================================================
-     BUSCADOR RÁPIDO
+     BUSCADOR
 ========================================================= -->
 
-<section class="bg-light py-5">
+<section class="position-relative">
 
   <div class="container">
 
-    <div class="text-center mb-4">
+    <div
+      class="card border-0 shadow-lg rounded-4
+             search-card">
 
-      <span class="text-success fw-bold text-uppercase">
-        Explora la base de datos
-      </span>
+      <div class="card-body p-4 p-lg-5">
 
-      <h2 class="fw-bold mt-2">
-        Encuentra tu jugador
-      </h2>
-
-      <p class="text-muted">
-        Utiliza los filtros para encontrar exactamente
-        el jugador que estás buscando.
-      </p>
-
-    </div>
+        <div class="row align-items-end g-3">
 
 
-    <div class="card border-0 shadow-sm">
+          <div class="col-lg-5">
 
-      <div class="card-body p-4">
+            <label class="form-label fw-semibold">
+              ¿Qué tipo de práctica buscas?
+            </label>
 
-        <form
-          action="/players"
-          method="GET">
+            <div class="input-group input-group-lg">
 
-          <div class="row g-3">
+              <span class="input-group-text bg-white border-end-0">
+                <i class="fa-solid fa-magnifying-glass text-muted"></i>
+              </span>
 
-            <!-- Nombre -->
-            <div class="col-12 col-lg-4">
-
-              <label class="form-label fw-semibold">
-                Jugador
-              </label>
-
-              <div class="input-group">
-
-                <span class="input-group-text bg-white">
-                  <i class="bi bi-search"></i>
-                </span>
-
-                <input
-                  type="text"
-                  class="form-control"
-                  name="search"
-                  placeholder="Ej. Messi, Mbappé, Haaland...">
-
-              </div>
-
-            </div>
-
-
-            <!-- Posición -->
-            <div class="col-12 col-md-4 col-lg-2">
-
-              <label class="form-label fw-semibold">
-                Posición
-              </label>
-
-              <select
-                name="position"
-                class="form-select">
-
-                <option value="">
-                  Todas
-                </option>
-
-                <option value="GK">
-                  GK
-                </option>
-
-                <option value="CB">
-                  CB
-                </option>
-
-                <option value="CM">
-                  CM
-                </option>
-
-                <option value="CAM">
-                  CAM
-                </option>
-
-                <option value="LW">
-                  LW
-                </option>
-
-                <option value="RW">
-                  RW
-                </option>
-
-                <option value="ST">
-                  ST
-                </option>
-
-              </select>
-
-            </div>
-
-
-            <!-- Nación -->
-            <div class="col-12 col-md-4 col-lg-2">
-
-              <label class="form-label fw-semibold">
-                Nación
-              </label>
-
-              <select
-                name="nation"
-                class="form-select">
-
-                <option value="">
-                  Todas
-                </option>
-
-                <option value="Argentina">
-                  Argentina
-                </option>
-
-                <option value="Brazil">
-                  Brasil
-                </option>
-
-                <option value="France">
-                  Francia
-                </option>
-
-                <option value="Spain">
-                  España
-                </option>
-
-              </select>
-
-            </div>
-
-
-            <!-- Liga -->
-            <div class="col-12 col-md-4 col-lg-2">
-
-              <label class="form-label fw-semibold">
-                Liga
-              </label>
-
-              <select
-                name="league"
-                class="form-select">
-
-                <option value="">
-                  Todas
-                </option>
-
-                <option value="Premier League">
-                  Premier League
-                </option>
-
-                <option value="La Liga">
-                  La Liga
-                </option>
-
-                <option value="Serie A">
-                  Serie A
-                </option>
-
-                <option value="Bundesliga">
-                  Bundesliga
-                </option>
-
-              </select>
-
-            </div>
-
-
-            <!-- Botón -->
-            <div class="col-12 col-lg-2 d-flex align-items-end">
-
-              <button
-                type="submit"
-                class="btn btn-success w-100">
-
-                <i class="bi bi-search me-2"></i>
-                Buscar
-
-              </button>
+              <input
+                type="text"
+                name="search"
+                class="form-control border-start-0"
+                placeholder="Cargo, área o palabra clave">
 
             </div>
 
           </div>
 
-        </form>
+
+          <div class="col-lg-3">
+
+            <label class="form-label fw-semibold">
+              Modalidad
+            </label>
+
+            <select class="form-select form-select-lg">
+
+              <option>
+                Todas
+              </option>
+
+              <option>
+                Presencial
+              </option>
+
+              <option>
+                Híbrida
+              </option>
+
+              <option>
+                Remota
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="col-lg-2">
+
+            <label class="form-label fw-semibold">
+              Área
+            </label>
+
+            <select class="form-select form-select-lg">
+
+              <option>
+                Todas
+              </option>
+
+              <option>
+                Tecnología
+              </option>
+
+              <option>
+                Marketing
+              </option>
+
+              <option>
+                Finanzas
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="col-lg-2">
+
+            <a
+              href="/convocatorias"
+              class="btn btn-success btn-lg w-100">
+
+              Buscar
+
+            </a>
+
+          </div>
+
+        </div>
 
       </div>
 
@@ -480,23 +396,44 @@
 </section>
 
 
+
 <!-- =========================================================
-     ESTADÍSTICAS GENERALES
+     CONVOCATORIAS DESTACADAS
 ========================================================= -->
 
 <section class="py-5">
 
-  <div class="container">
+  <div class="container py-4">
 
-    <div class="text-center mb-5">
 
-      <span class="text-success fw-bold">
-        PLAYERSTATS
-      </span>
+    <div class="d-flex justify-content-between
+                align-items-end mb-4">
 
-      <h2 class="fw-bold mt-2">
-        Nuestra base de datos
-      </h2>
+      <div>
+
+        <span class="text-success fw-bold">
+          OPORTUNIDADES
+        </span>
+
+        <h2 class="fw-bold mt-2 mb-1">
+          Convocatorias destacadas
+        </h2>
+
+        <p class="text-muted mb-0">
+          Descubre algunas de las oportunidades disponibles.
+        </p>
+
+      </div>
+
+
+      <a
+        href="/convocatorias"
+        class="btn btn-outline-dark d-none d-md-block">
+
+        Ver todas
+        <i class="fa-solid fa-arrow-right ms-2"></i>
+
+      </a>
 
     </div>
 
@@ -504,31 +441,77 @@
     <div class="row g-4">
 
 
-      <!-- Jugadores -->
-      <div class="col-6 col-lg-3">
+      <!-- Convocatoria 1 -->
+      <div class="col-md-4">
 
-        <div class="card border-0 shadow-sm h-100">
+        <div
+          class="card border-0 shadow-sm
+                 h-100 rounded-4">
 
-          <div class="card-body text-center p-4">
+          <div class="card-body p-4">
 
-            <div
-              class="bg-success bg-opacity-10
-                     text-success rounded-circle
-                     d-inline-flex align-items-center
-                     justify-content-center mb-3"
-              style="width:70px;height:70px;">
 
-              <i class="bi bi-people fs-2"></i>
+            <div class="d-flex justify-content-between mb-4">
+
+              <div
+                class="bg-success bg-opacity-10
+                       text-success rounded-3
+                       d-flex align-items-center
+                       justify-content-center"
+                style="width:50px;height:50px;">
+
+                <i class="fa-solid fa-code fs-5"></i>
+
+              </div>
+
+
+              <span class="badge bg-success bg-opacity-10 text-success">
+                Nueva
+              </span>
 
             </div>
 
-            <h3 class="fw-bold mb-1">
-              <%= typeof playerCount !== 'undefined' ? playerCount : '12K+' %>
-            </h3>
 
-            <p class="text-muted mb-0">
-              Jugadores
+            <h5 class="fw-bold">
+              Practicante de Desarrollo
+            </h5>
+
+            <p class="text-muted small mb-3">
+              Empresa tecnológica
             </p>
+
+
+            <div class="d-flex flex-wrap gap-2 mb-4">
+
+              <span class="badge bg-light text-dark">
+                Tecnología
+              </span>
+
+              <span class="badge bg-light text-dark">
+                Híbrido
+              </span>
+
+            </div>
+
+
+            <div class="d-flex justify-content-between
+                        align-items-center">
+
+              <small class="text-muted">
+                Lima
+              </small>
+
+              <a
+                href="/convocatorias"
+                class="text-success fw-semibold
+                       text-decoration-none">
+
+                Ver más
+                <i class="fa-solid fa-arrow-right ms-1"></i>
+
+              </a>
+
+            </div>
 
           </div>
 
@@ -537,31 +520,77 @@
       </div>
 
 
-      <!-- Equipos -->
-      <div class="col-6 col-lg-3">
+      <!-- Convocatoria 2 -->
+      <div class="col-md-4">
 
-        <div class="card border-0 shadow-sm h-100">
+        <div
+          class="card border-0 shadow-sm
+                 h-100 rounded-4">
 
-          <div class="card-body text-center p-4">
+          <div class="card-body p-4">
 
-            <div
-              class="bg-primary bg-opacity-10
-                     text-primary rounded-circle
-                     d-inline-flex align-items-center
-                     justify-content-center mb-3"
-              style="width:70px;height:70px;">
 
-              <i class="bi bi-shield fs-2"></i>
+            <div class="d-flex justify-content-between mb-4">
+
+              <div
+                class="bg-primary bg-opacity-10
+                       text-primary rounded-3
+                       d-flex align-items-center
+                       justify-content-center"
+                style="width:50px;height:50px;">
+
+                <i class="fa-solid fa-chart-line fs-5"></i>
+
+              </div>
+
+
+              <span class="badge bg-light text-dark">
+                Disponible
+              </span>
 
             </div>
 
-            <h3 class="fw-bold mb-1">
-              <%= typeof teamCount !== 'undefined' ? teamCount : '500+' %>
-            </h3>
 
-            <p class="text-muted mb-0">
-              Equipos
+            <h5 class="fw-bold">
+              Practicante de Marketing
+            </h5>
+
+            <p class="text-muted small mb-3">
+              Empresa de servicios
             </p>
+
+
+            <div class="d-flex flex-wrap gap-2 mb-4">
+
+              <span class="badge bg-light text-dark">
+                Marketing
+              </span>
+
+              <span class="badge bg-light text-dark">
+                Presencial
+              </span>
+
+            </div>
+
+
+            <div class="d-flex justify-content-between
+                        align-items-center">
+
+              <small class="text-muted">
+                Lima
+              </small>
+
+              <a
+                href="/convocatorias"
+                class="text-success fw-semibold
+                       text-decoration-none">
+
+                Ver más
+                <i class="fa-solid fa-arrow-right ms-1"></i>
+
+              </a>
+
+            </div>
 
           </div>
 
@@ -570,31 +599,77 @@
       </div>
 
 
-      <!-- Ligas -->
-      <div class="col-6 col-lg-3">
+      <!-- Convocatoria 3 -->
+      <div class="col-md-4">
 
-        <div class="card border-0 shadow-sm h-100">
+        <div
+          class="card border-0 shadow-sm
+                 h-100 rounded-4">
 
-          <div class="card-body text-center p-4">
+          <div class="card-body p-4">
 
-            <div
-              class="bg-warning bg-opacity-10
-                     text-warning rounded-circle
-                     d-inline-flex align-items-center
-                     justify-content-center mb-3"
-              style="width:70px;height:70px;">
 
-              <i class="bi bi-trophy fs-2"></i>
+            <div class="d-flex justify-content-between mb-4">
+
+              <div
+                class="bg-warning bg-opacity-10
+                       text-warning rounded-3
+                       d-flex align-items-center
+                       justify-content-center"
+                style="width:50px;height:50px;">
+
+                <i class="fa-solid fa-coins fs-5"></i>
+
+              </div>
+
+
+              <span class="badge bg-light text-dark">
+                Disponible
+              </span>
 
             </div>
 
-            <h3 class="fw-bold mb-1">
-              <%= typeof leagueCount !== 'undefined' ? leagueCount : '40+' %>
-            </h3>
 
-            <p class="text-muted mb-0">
-              Ligas
+            <h5 class="fw-bold">
+              Practicante de Finanzas
+            </h5>
+
+            <p class="text-muted small mb-3">
+              Empresa corporativa
             </p>
+
+
+            <div class="d-flex flex-wrap gap-2 mb-4">
+
+              <span class="badge bg-light text-dark">
+                Finanzas
+              </span>
+
+              <span class="badge bg-light text-dark">
+                Híbrido
+              </span>
+
+            </div>
+
+
+            <div class="d-flex justify-content-between
+                        align-items-center">
+
+              <small class="text-muted">
+                Lima
+              </small>
+
+              <a
+                href="/convocatorias"
+                class="text-success fw-semibold
+                       text-decoration-none">
+
+                Ver más
+                <i class="fa-solid fa-arrow-right ms-1"></i>
+
+              </a>
+
+            </div>
 
           </div>
 
@@ -602,38 +677,6 @@
 
       </div>
 
-
-      <!-- Naciones -->
-      <div class="col-6 col-lg-3">
-
-        <div class="card border-0 shadow-sm h-100">
-
-          <div class="card-body text-center p-4">
-
-            <div
-              class="bg-danger bg-opacity-10
-                     text-danger rounded-circle
-                     d-inline-flex align-items-center
-                     justify-content-center mb-3"
-              style="width:70px;height:70px;">
-
-              <i class="bi bi-globe-americas fs-2"></i>
-
-            </div>
-
-            <h3 class="fw-bold mb-1">
-              <%= typeof nationCount !== 'undefined' ? nationCount : '200+' %>
-            </h3>
-
-            <p class="text-muted mb-0">
-              Naciones
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
 
     </div>
 
@@ -642,161 +685,201 @@
 </section>
 
 
+
 <!-- =========================================================
-     SOBRE LA APLICACIÓN
+     ESTADÍSTICAS
+========================================================= -->
+
+<section class="bg-light py-5">
+
+  <div class="container py-4">
+
+    <div class="row text-center g-4">
+
+
+      <div class="col-6 col-lg-3">
+
+        <h2 class="display-5 fw-bold text-success">
+          500+
+        </h2>
+
+        <p class="text-muted mb-0">
+          Convocatorias
+        </p>
+
+      </div>
+
+
+      <div class="col-6 col-lg-3">
+
+        <h2 class="display-5 fw-bold text-success">
+          100+
+        </h2>
+
+        <p class="text-muted mb-0">
+          Empresas
+        </p>
+
+      </div>
+
+
+      <div class="col-6 col-lg-3">
+
+        <h2 class="display-5 fw-bold text-success">
+          1,000+
+        </h2>
+
+        <p class="text-muted mb-0">
+          Estudiantes
+        </p>
+
+      </div>
+
+
+      <div class="col-6 col-lg-3">
+
+        <h2 class="display-5 fw-bold text-success">
+          24/7
+        </h2>
+
+        <p class="text-muted mb-0">
+          Plataforma disponible
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CÓMO FUNCIONA
 ========================================================= -->
 
 <section
-  id="about"
-  class="bg-dark text-white py-5">
+  id="como-funciona"
+  class="py-5">
 
-  <div class="container">
-
-    <div class="row align-items-center g-5">
-
-      <div class="col-lg-6">
-
-        <span class="badge bg-success mb-3">
-          SOBRE PLAYERSTATS
-        </span>
-
-        <h2 class="display-6 fw-bold mb-4">
-          Todo lo que necesitas
-          para explorar jugadores.
-        </h2>
-
-        <p class="text-secondary lead">
-          PlayerStats es una plataforma diseñada para
-          consultar y gestionar información relacionada
-          con jugadores de FIFA / EA FC.
-        </p>
-
-        <p class="text-secondary">
-          La información está organizada mediante jugadores,
-          equipos, ligas, naciones, posiciones, pies y
-          estilos de juego.
-        </p>
-
-        <a
-          href="/players"
-          class="btn btn-success mt-3">
-
-          Explorar base de datos
-
-        </a>
-
-      </div>
+  <div class="container py-5">
 
 
-      <div class="col-lg-6">
+    <div class="text-center mb-5">
 
-        <div class="row g-3">
+      <span class="text-success fw-bold">
+        SIMPLE Y RÁPIDO
+      </span>
 
-          <div class="col-6">
+      <h2 class="fw-bold mt-2">
+        ¿Cómo funciona?
+      </h2>
 
-            <div class="card bg-secondary bg-opacity-10
-                        border-secondary h-100">
+      <p class="text-muted">
+        Encontrar una práctica puede ser más sencillo.
+      </p>
 
-              <div class="card-body p-4">
-
-                <i class="bi bi-bar-chart-fill
-                          text-success fs-1"></i>
-
-                <h5 class="mt-3">
-                  Estadísticas
-                </h5>
-
-                <p class="text-secondary small mb-0">
-                  Consulta las principales estadísticas
-                  de cada jugador.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
+    </div>
 
 
-          <div class="col-6">
-
-            <div class="card bg-secondary bg-opacity-10
-                        border-secondary h-100">
-
-              <div class="card-body p-4">
-
-                <i class="bi bi-funnel-fill
-                          text-success fs-1"></i>
-
-                <h5 class="mt-3">
-                  Filtros
-                </h5>
-
-                <p class="text-secondary small mb-0">
-                  Encuentra jugadores utilizando
-                  múltiples filtros.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
+    <div class="row g-5">
 
 
-          <div class="col-6">
+      <!-- Paso 1 -->
+      <div class="col-md-4 text-center">
 
-            <div class="card bg-secondary bg-opacity-10
-                        border-secondary h-100">
+        <div
+          class="bg-success bg-opacity-10
+                 text-success rounded-circle
+                 d-inline-flex align-items-center
+                 justify-content-center mb-4"
+          style="width:80px;height:80px;">
 
-              <div class="card-body p-4">
-
-                <i class="bi bi-database-fill
-                          text-success fs-1"></i>
-
-                <h5 class="mt-3">
-                  Base de datos
-                </h5>
-
-                <p class="text-secondary small mb-0">
-                  Información organizada y relacionada.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <div class="col-6">
-
-            <div class="card bg-secondary bg-opacity-10
-                        border-secondary h-100">
-
-              <div class="card-body p-4">
-
-                <i class="bi bi-lightning-fill
-                          text-success fs-1"></i>
-
-                <h5 class="mt-3">
-                  Rápido
-                </h5>
-
-                <p class="text-secondary small mb-0">
-                  Busca y encuentra jugadores
-                  rápidamente.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
+          <i class="fa-solid fa-user-plus fs-3"></i>
 
         </div>
 
+
+        <div class="mb-2 text-success fw-bold">
+          PASO 01
+        </div>
+
+        <h5 class="fw-bold">
+          Crea tu perfil
+        </h5>
+
+        <p class="text-muted">
+          Regístrate y completa tu información
+          académica y profesional.
+        </p>
+
       </div>
+
+
+      <!-- Paso 2 -->
+      <div class="col-md-4 text-center">
+
+        <div
+          class="bg-success bg-opacity-10
+                 text-success rounded-circle
+                 d-inline-flex align-items-center
+                 justify-content-center mb-4"
+          style="width:80px;height:80px;">
+
+          <i class="fa-solid fa-magnifying-glass fs-3"></i>
+
+        </div>
+
+
+        <div class="mb-2 text-success fw-bold">
+          PASO 02
+        </div>
+
+        <h5 class="fw-bold">
+          Encuentra una oportunidad
+        </h5>
+
+        <p class="text-muted">
+          Explora y filtra las convocatorias
+          según tus intereses.
+        </p>
+
+      </div>
+
+
+      <!-- Paso 3 -->
+      <div class="col-md-4 text-center">
+
+        <div
+          class="bg-success bg-opacity-10
+                 text-success rounded-circle
+                 d-inline-flex align-items-center
+                 justify-content-center mb-4"
+          style="width:80px;height:80px;">
+
+          <i class="fa-solid fa-paper-plane fs-3"></i>
+
+        </div>
+
+
+        <div class="mb-2 text-success fw-bold">
+          PASO 03
+        </div>
+
+        <h5 class="fw-bold">
+          Postula
+        </h5>
+
+        <p class="text-muted">
+          Postula a las oportunidades que
+          mejor se adapten a tu perfil.
+        </p>
+
+      </div>
+
 
     </div>
 
@@ -805,36 +888,54 @@
 </section>
 
 
+
 <!-- =========================================================
-     CTA FINAL
+     CTA
 ========================================================= -->
 
-<section class="py-5">
+<section class="pb-5">
 
   <div class="container">
 
     <div
-      class="bg-success rounded-4 p-5 text-center text-white">
+      class="bg-dark text-white rounded-4
+             p-5 overflow-hidden position-relative">
 
-      <i class="bi bi-shield-fill-check fs-1"></i>
+      <div class="row align-items-center position-relative">
 
-      <h2 class="fw-bold mt-3">
-        ¿Listo para explorar?
-      </h2>
+        <div class="col-lg-8">
 
-      <p class="lead mb-4">
-        Descubre jugadores, estadísticas,
-        equipos y mucho más.
-      </p>
+          <span class="text-success fw-bold">
+            ¿LISTO PARA EMPEZAR?
+          </span>
 
-      <a
-        href="/players"
-        class="btn btn-light btn-lg px-5">
+          <h2 class="display-6 fw-bold mt-2">
+            Tu próxima oportunidad
+            puede estar aquí.
+          </h2>
 
-        <i class="bi bi-search me-2"></i>
-        Explorar jugadores
+          <p class="text-secondary lead mb-0">
+            Explora las convocatorias disponibles
+            y comienza a construir tu experiencia.
+          </p>
 
-      </a>
+        </div>
+
+
+        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+
+          <a
+            href="/register"
+            class="btn btn-success btn-lg px-4">
+
+            Crear mi cuenta
+            <i class="fa-solid fa-arrow-right ms-2"></i>
+
+          </a>
+
+        </div>
+
+      </div>
 
     </div>
 

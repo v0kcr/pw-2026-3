@@ -1,23 +1,15 @@
 <!-- views/partials/_navbar.ejs -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
   <div class="container">
 
-    <!-- Brand -->
-    <a
-      class="navbar-brand fw-bold text-success d-flex align-items-center"
-      href="/">
-
-      <i class="fa-solid fa-shield-halved fs-4 me-2"></i>
-
-      <span>
-        PlayerStats
-      </span>
-
+    <!-- Logo / Brand -->
+    <a class="navbar-brand d-flex align-items-center fw-bold" href="/">
+      <i class="fa-solid fa-shield-halved text-success fs-4 me-2"></i>
+      <span>Práctica Lima</span>
     </a>
 
-
-    <!-- Mobile button -->
+    <!-- Botón menú móvil -->
     <button
       class="navbar-toggler"
       type="button"
@@ -28,199 +20,59 @@
       aria-label="Abrir menú">
 
       <span class="navbar-toggler-icon"></span>
-
     </button>
 
+    <!-- Contenido del navbar -->
+    <div class="collapse navbar-collapse" id="navbarContent">
 
-    <!-- Navbar content -->
-    <div
-      class="collapse navbar-collapse"
-      id="navbarContent">
+      <!-- Enlaces públicos -->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
 
-      <!-- Main navigation -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-        <!-- Inicio -->
         <li class="nav-item">
-
-          <a
-            class="nav-link active"
-            href="/">
-
+          <a class="nav-link px-3" href="/">
             <i class="fa-solid fa-house me-1"></i>
             Inicio
-
           </a>
-
         </li>
 
-
-        <!-- Jugadores -->
         <li class="nav-item">
-
-          <a
-            class="nav-link"
-            href="/players">
-
-            <i class="fa-solid fa-users me-1"></i>
-            Jugadores
-
+          <a class="nav-link px-3" href="/convocatoria">
+            <i class="fa-solid fa-bullhorn me-1"></i>
+            Convocatorias
           </a>
-
         </li>
 
-
-        <!-- Equipos -->
         <li class="nav-item">
-
-          <a
-            class="nav-link"
-            href="/teams">
-
-            <i class="fa-solid fa-shield-halved me-1"></i>
-            Equipos
-
+          <a class="nav-link px-3" href="/empresa">
+            <i class="fa-solid fa-building me-1"></i>
+            Empresas
           </a>
-
         </li>
 
-
-        <!-- Ligas -->
         <li class="nav-item">
-
-          <a
-            class="nav-link"
-            href="/leagues">
-
-            <i class="fa-solid fa-trophy me-1"></i>
-            Ligas
-
+          <a class="nav-link px-3" href="/como-funciona">
+            <i class="fa-solid fa-circle-question me-1"></i>
+            Cómo funciona
           </a>
-
-        </li>
-
-
-        <!-- Explorar -->
-        <li class="nav-item dropdown">
-
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false">
-
-            <i class="fa-solid fa-compass me-1"></i>
-            Explorar
-
-          </a>
-
-
-          <ul class="dropdown-menu shadow">
-
-            <li>
-              <h6 class="dropdown-header">
-                Posiciones
-              </h6>
-            </li>
-
-            <li>
-              <a
-                class="dropdown-item"
-                href="/players?position=ST">
-
-                <i class="fa-solid fa-futbol me-2"></i>
-                Delanteros
-
-              </a>
-            </li>
-
-            <li>
-              <a
-                class="dropdown-item"
-                href="/players?position=CM">
-
-                <i class="fa-solid fa-arrows-left-right me-2"></i>
-                Mediocampistas
-
-              </a>
-            </li>
-
-            <li>
-              <a
-                class="dropdown-item"
-                href="/players?position=CB">
-
-                <i class="fa-solid fa-shield me-2"></i>
-                Defensas
-
-              </a>
-            </li>
-
-            <li>
-              <a
-                class="dropdown-item"
-                href="/players?position=GK">
-
-                <i class="fa-solid fa-hand me-2"></i>
-                Arqueros
-
-              </a>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a
-                class="dropdown-item"
-                href="/players">
-
-                <i class="fa-solid fa-table-cells-large me-2"></i>
-                Todos los jugadores
-
-              </a>
-            </li>
-
-          </ul>
-
         </li>
 
       </ul>
 
+      <!-- Acciones de usuario -->
+      <div class="d-flex flex-column flex-lg-row gap-2">
 
-      <!-- Search -->
-      <form
-        class="d-flex"
-        role="search"
-        action="/players"
-        method="GET">
+        <a href="/login" class="btn btn-outline-light">
+          Iniciar sesión
+        </a>
 
-        <div class="input-group">
+        <a href="/register" class="btn btn-success">
+          Registrarse
+        </a>
 
-          <input
-            class="form-control"
-            type="search"
-            name="search"
-            placeholder="Buscar jugador..."
-            aria-label="Buscar jugador"
-          >
-
-          <button
-            class="btn btn-success"
-            type="submit">
-
-            <i class="fa-solid fa-magnifying-glass"></i>
-
-          </button>
-
-        </div>
-
-      </form>
+      </div>
 
     </div>
 
   </div>
-
 </nav>
+
