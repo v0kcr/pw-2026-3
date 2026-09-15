@@ -103,7 +103,16 @@
           </li>
 
         </ul>
+      </div>
 
+      <!-- Columna 3: Ayuda -->
+      <div class="col-lg-2 col-md-6">
+        <h6 class="text-uppercase fw-bold mb-3" style="color: #ffffff; letter-spacing: 1.5px; font-size: 0.8rem; opacity: 0.9;">Ayuda</h6>
+        <ul class="list-unstyled small custom-footer-links">
+          <li class="mb-2"><a href="/faq">Preguntas frecuentes</a></li>
+          <li class="mb-2"><a href="/terminos">Términos del servicio</a></li>
+          <li class="mb-2"><a href="/privacidad">Privacidad de datos</a></li>
+        </ul>
       </div>
 
 
@@ -156,9 +165,7 @@
 
             </a>
           </li>
-
         </ul>
-
       </div>
 
 
@@ -248,4 +255,33 @@
 
   </div>
 
+  <!-- Estilos CSS extra para los efectos "cool" de animación -->
+  <style>
+    .custom-footer-links a {
+      color: #8f94a6;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    .custom-footer-links a:hover {
+      color: #ffffff;
+      transform: translateX(4px);
+      text-shadow: 0 0 8px rgba(255,255,255,0.3);
+    }
+    .custom-cool-btn {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(5px);
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .custom-cool-btn:hover {
+      color: #0b0c10;
+      background: #ffffff;
+      border-color: #ffffff;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+      transform: translateY(-2px);
+    }
+  </style>
 </footer>
